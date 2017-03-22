@@ -1,24 +1,24 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Making rails go without installing it via Docker? ##
 
-Things you may want to cover:
+clone then run this:
 
-* Ruby version
+    docker-compose build
 
-* System dependencies
+then
 
-* Configuration
+    docker-compose up
 
-* Database creation
+might require this:
 
-* Database initialization
+    docker-compose run web rake db:create
 
-* How to run the test suite
+> Note: If you stop the example application and attempt to restart it, you might get the following error: web_1 | A server is already running. Check /myapp/tmp/pids/server.pid. One way to resolve this is to delete the file `tmp/pids/server.pid`, and then re-start the application with `docker-compose up`.
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+**Next**:
+
+ - Use mySQL, just because.
+ - Make a couple pages...
+
